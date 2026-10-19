@@ -1,0 +1,68 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the article given under preferred-citation."
+type: software
+title: "Supervisory gate control of the South Mirzachul main canal under supply shortage: code, data and results"
+abstract: >-
+  Code, input data, trained controllers and simulation results for the article
+  "Neural supervisory gate control for sharing a supply shortage in a large
+  irrigation main canal: benchmark against an optimized rule and robustness tests".
+  The study tests whether a neural supervisory controller, trained by an evolution
+  strategy on a one-dimensional Saint-Venant model of the 123.7-km South Mirzachul
+  main canal (Uzbekistan), shares a supply shortage more equitably than a fixed rule
+  and than a transparent rule optimized with the same algorithm and budget, using
+  only the gates that the canal already has. It also tests the controllers under
+  roughness uncertainty, measurement noise and equipment faults. The repository
+  contains everything needed to rebuild Tables 1–6 and Figs. 2–9 of the article.
+  Code: MIT licence; data, results and figures: CC BY 4.0 (see LICENSE-DATA.md).
+version: "1.0.0"
+license: MIT
+repository-code: "https://github.com/6328484/south-mirzachul-supervisory-control"
+authors:
+  - family-names: Seytov
+    given-names: Aybek J.
+    orcid: "https://orcid.org/0009-0002-8904-5178"
+    affiliation: "University of World Economy and Diplomacy, Tashkent, Uzbekistan"
+  - family-names: Abdujabborov
+    given-names: Zafar A.
+    orcid: "https://orcid.org/0009-0000-3938-7562"
+    affiliation: "National University of Uzbekistan named after Mirzo Ulugbek, Tashkent, Uzbekistan"
+    email: abdujabborovzafar518@gmail.com
+  - family-names: Choriyorov
+    given-names: Nurbek Q.
+    orcid: "https://orcid.org/0000-0001-7289-0303"
+    affiliation: "Research Institute of Irrigation and Water Problems; University of World Economy and Diplomacy, Tashkent, Uzbekistan"
+keywords:
+  - irrigation canal automation
+  - equitable water distribution
+  - water shortage
+  - neural network control
+  - evolution strategy
+  - Saint-Venant model
+references:
+  - type: software
+    title: "Neural gate control of the South Mirzachul main canal under supply shortage: code, data and results"
+    version: "1.0.0"
+    doi: 10.5281/zenodo.23351117
+    repository-code: "https://github.com/6328484/south-mirzachul-neural-gate-control"
+    authors:
+      - family-names: Seytov
+        given-names: Aybek J.
+      - family-names: Abdujabborov
+        given-names: Zafar A.
+      - family-names: Choriyorov
+        given-names: Nurbek Q.
+preferred-citation:
+  type: article
+  title: "Neural supervisory gate control for sharing a supply shortage in a large irrigation main canal: benchmark against an optimized rule and robustness tests"
+  status: submitted
+  year: 2026
+  authors:
+    - family-names: Seytov
+      given-names: Aybek J.
+      orcid: "https://orcid.org/0009-0002-8904-5178"
+    - family-names: Abdujabborov
+      given-names: Zafar A.
+      orcid: "https://orcid.org/0009-0000-3938-7562"
+    - family-names: Choriyorov
+      given-names: Nurbek Q.
+      orcid: "https://orcid.org/0000-0001-7289-0303"

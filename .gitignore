@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+# EPS versions of the figures are produced by the scripts but not tracked
+*.eps
+.DS_Store

@@ -1,0 +1,98 @@
+[
+ {
+  "method": "neural",
+  "seed": 0,
+  "J_val": 9.817322146254906,
+  "J_nominal3": 1.1644125830931191
+ },
+ {
+  "method": "neural",
+  "seed": 1,
+  "J_val": 12.400896061508456,
+  "J_nominal3": 1.684849763160444
+ },
+ {
+  "method": "neural",
+  "seed": 2,
+  "J_val": 9.596351013538204,
+  "J_nominal3": 1.2978708408726831
+ },
+ {
+  "method": "neural",
+  "seed": 3,
+  "J_val": 10.227941418267697,
+  "J_nominal3": 1.5047945699768124
+ },
+ {
+  "method": "neural",
+  "seed": 4,
+  "J_val": 14.736042968340591,
+  "J_nominal3": 1.593255314086405
+ },
+ {
+  "method": "neural_ftnom",
+  "seed": 0,
+  "J_val": 8.945566590564994,
+  "J_nominal3": 1.117045460751801
+ },
+ {
+  "method": "neural_ftnom",
+  "seed": 1,
+  "J_val": 11.228991482008466,
+  "J_nominal3": 1.2500277766611934
+ },
+ {
+  "method": "neural_ftnom",
+  "seed": 2,
+  "J_val": 8.6672808633679,
+  "J_nominal3": 1.1871264009443134
+ },
+ {
+  "method": "neural_ftnom",
+  "seed": 3,
+  "J_val": 10.19672005597015,
+  "J_nominal3": 1.3019848837314654
+ },
+ {
+  "method": "neural_ftnom",
+  "seed": 4,
+  "J_val": 16.166158354882157,
+  "J_nominal3": 1.226385515476355
+ },
+ {
+  "method": "neural_ftdr",
+  "seed": 0,
+  "J_val": 7.126970875389497,
+  "J_nominal3": 1.2536061945625494
+ },
+ {
+  "method": "neural_ftdr",
+  "seed": 1,
+  "J_val": 9.320014637963386,
+  "J_nominal3": 1.5802141846111613
+ },
+ {
+  "method": "neural_ftdr",
+  "seed": 2,
+  "J_val": 8.104140822169201,
+  "J_nominal3": 1.2858337188088835
+ },
+ {
+  "method": "neural_ftdr",
+  "seed": 3,
+  "J_val": 8.409684843106316,
+  "J_nominal3": 1.4565881132048446
+ },
+ {
+  "method": "neural_ftdr",
+  "seed": 4,
+  "J_val": 8.77069455988478,
+  "J_nominal3": 1.4283240698380841
+ },
+ {
+  "method": "rule",
+  "seed": -1,
+  "J_val": 50.33341563281851,
+  "J_nominal3": 17.43204716677969
+ }
+]

@@ -1,0 +1,38 @@
+[
+ {
+  "method": "staged_dr",
+  "seed": 0,
+  "J_val": 18.9604970938637,
+  "J_nominal3": 3.217687795159084
+ },
+ {
+  "method": "staged_nom",
+  "seed": 0,
+  "J_val": 19.42198369159272,
+  "J_nominal3": 3.152331785103091
+ },
+ {
+  "method": "staged_dr",
+  "seed": 1,
+  "J_val": 14.776949149437515,
+  "J_nominal3": 2.035801646398079
+ },
+ {
+  "method": "staged_nom",
+  "seed": 1,
+  "J_val": 16.976787046881572,
+  "J_nominal3": 2.485449160191317
+ },
+ {
+  "method": "staged_dr",
+  "seed": 2,
+  "J_val": 18.903054151506442,
+  "J_nominal3": 3.28541822304929
+ },
+ {
+  "method": "staged_nom",
+  "seed": 2,
+  "J_val": 19.013020892042825,
+  "J_nominal3": 3.0639701239755897
+ }
+]
