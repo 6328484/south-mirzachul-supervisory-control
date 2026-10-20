@@ -1,4 +1,4 @@
-"""Measurement-noise and fault tests (Sect. 4.7, Table 6), evaluation only.
+"""Measurement-noise and fault tests (Sect. V-G, Table VI), evaluation only.
 Noise: Gaussian errors on every measured depth (sd 0.02 / 0.05 m) and a 2 % relative error on every measured
 discharge, drawn independently each hour and seen by both control layers; three realisations each, at f = 0.75
 and under variable inflow. Faults (f = 0.75): (a) check gate PK1087+23 stuck at its calibrated opening;

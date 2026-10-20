@@ -1,4 +1,4 @@
-"""Training of the optimized staged rule and of the gate-effort variants (Sects. 3.6 and 4.5). Same OpenAI-ES, population (8 antithetic pairs), sigma = 0.1,
+"""Training of the optimized staged rule and of the gate-effort variants (Sects. IV-F and V-E). Same OpenAI-ES, population (8 antithetic pairs), sigma = 0.1,
 Adam step 0.05, objective J and selection rules as train_nominal.py / train_continue.py.
   python src/train_extra.py staged nominal <seed> 100      staged rule, nominal canal, from theta ~ N(0, 0.01^2)
   python src/train_extra.py staged randomised <seed> 40    staged rule, +40 generations with randomised roughness

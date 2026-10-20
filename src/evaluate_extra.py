@@ -1,4 +1,4 @@
-"""Evaluation of the optimized staged rule and the gate-effort variants (Sects. 4.1-4.6, Tables 4-5).
+"""Evaluation of the optimized staged rule and the gate-effort variants (Sects. V-A–V-F, Tables IV–V).
 1) staged rule (nominal and randomised training, 3 seeds) and the effort variants of the neural supervisor
    (gate-movement weights x5 and x15, 3 seeds) in the four test scenarios
 2) roughness sweep n/n0 = 0.8-1.4 at f = 0.8 for the randomised staged rule

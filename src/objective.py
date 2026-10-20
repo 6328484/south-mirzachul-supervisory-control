@@ -1,4 +1,4 @@
-"""Training objective J (Sect. 3.3, Eqs. 21-23), to be minimised, for one 72-h training episode:
+"""Training objective J (Sect. IV-C, Eqs. 21-23), to be minimised, for one 72-h training episode:
   J = CV(group delivery ratios, mean over 24-72 h)      — inequity
     + 0.5 * max(0, f - ratio of the worst-served group)  — shortfall of the worst-served group
     + 2.0 * S                                            — severity of level violations:

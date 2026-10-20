@@ -1,5 +1,5 @@
 """
-Evaluation of all strategies (Sects. 3.8 and 4)
+Evaluation of all strategies (Sects. IV-H and V)
 ===============================================
 1) The four test scenarios (scenarios.py; not used in training), strategies:
    none               — no control (gates keep their calibrated openings)

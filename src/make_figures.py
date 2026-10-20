@@ -1,9 +1,9 @@
-"""Figures 4-9 and Table 4 of the article.
+"""Figures 4-9 and Table IV of the article.
 Input:  results/results.json, results/results_extra.json, results/timeseries.npz, results/timeseries_extra.npz,
         results/robustness.json, results/robustness_extra.json, results/validation.json,
         results/validation_extra.json, results/training_logs/*.csv
 Output: figures/Fig4_training, Fig5_shares, Fig6_levels, Fig7_gates, Fig8_effort, Fig9_robustness
-        (.png 300 dpi, .pdf, .eps), results/table_results.csv, results/table_results.md (Table 4).
+        (.png 300 dpi, .pdf, .eps), results/table_results.csv, results/table_results.md (Table IV).
 Width <= 174 mm, Liberation Sans (metric-compatible with Arial) 8 pt.
 Usage:  python src/make_figures.py"""
 import json
@@ -277,7 +277,7 @@ def fig_robustness(RB):
     save(fig, "Fig9_robustness")
 
 
-# ---------------------------------------------------------------- Table 4
+# ---------------------------------------------------------------- Table IV
 def table(R):
     fmt = {"cv": ("{:.3f}", 1), "worst": ("{:.0f}", 100), "violation_hours": ("{:.0f}", 1),
            "max_over_m": ("{:.2f}", 1), "max_under_m": ("{:.2f}", 1), "max_drawdown_rate": ("{:.2f}", 1),

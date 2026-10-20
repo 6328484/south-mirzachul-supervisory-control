@@ -1,5 +1,5 @@
 """
-Full-control benchmark (FCB): a theoretical reference (Sect. 3.7, Eq. 45)
+Full-control benchmark (FCB): a theoretical reference (Sect. IV-G, Eq. 45)
 =================================================================
 The FCB is NOT a description of real automated gates of the canal, and it is not an operating option for
 the existing canal. It answers the question: if all 58 offtakes listed in the passport were remotely

@@ -31,13 +31,13 @@ The same passport tables as transcribed in Russian, before processing: `pk_m` is
 
 ### Reach data
 
-The geometry and hydraulic data of the ten passport reaches (Table 1 of the article) are given in the `PASSPORT` dictionary in `src/gated_model.py`. These are the length, the discharge at Qmax, the top and bottom widths, the depths at Qmax, Qnorm and Qmin, and the bed slope.
+The geometry and hydraulic data of the ten passport reaches (Table I of the article) are given in the `PASSPORT` dictionary in `src/gated_model.py`. These are the length, the discharge at Qmax, the top and bottom widths, the depths at Qmax, Qnorm and Qmin, and the bed slope.
 
 ### `canal_route.json` — digitised canal route
 
 `route_latlon` is a list of [latitude, longitude] points (WGS84) along the 123.7-km canal from the head works to the tail structure PK1237; `length_km` is the length of the drawn route. The route was digitised from Google Earth imagery and used to draw Fig. 1. Between km 97 and PK1237 it is interpolated between two located points. The Google Earth screenshots are not redistributed here, so Fig. 1 cannot be regenerated from this repository.
 
-## Processing in the model (Sect. 3.1 of the article)
+## Processing in the model (Sect. IV-A of the article)
 
 - The decrease of the passport Qmax along each reach is distributed among the offtakes of that reach in proportion to their design capacities, without exceeding any capacity. The rest (26.1 m³/s in total, in reaches 1 and 3) is treated as distributed seepage and unlisted withdrawals and is excluded from the delivery indicators.
 - The offtake demand at Qmax is 259.9 m³/s, and 14.0 m³/s leaves through the tail structure. The five largest branches take 171.4 m³/s (66 %): Right Bayaut 22.8, YuR-10 10.1, Central 102.5, Kurgantepa 13.7 and YuR-18 (Akbulak) 22.4 m³/s.

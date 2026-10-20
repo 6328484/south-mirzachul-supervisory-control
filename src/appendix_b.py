@@ -1,4 +1,4 @@
-"""Appendix B of the article: properties of the local FF/P layer, and the numbers quoted in Appendix A.
+"""Appendix B of the article (Supplementary Material): properties of the local FF/P layer, and the numbers quoted in Appendix A.
 Output: results/appendix_b.json (Table B.1 and the checks below), printed summary.
   - Table B.1: pool length L, surface area F_k at 300 m3/s, outflow Q_k^out, travel times of small waves
     t_down = sum dx/(c+V), t_up = sum dx/(c-V), steady level error e_inf (Eq. B.6) for eps_mu = -0.1, +0.1,

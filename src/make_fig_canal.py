@@ -2,7 +2,7 @@
 (a) discharge along the canal (the offtakes reduce it), with the five regulated branches marked;
 (b) longitudinal profile: bed, water surface and the allowed depth range at the 9 control points.
 Output: figures/Fig2_canal.png/.pdf/.eps (174 mm, Liberation Sans 8 pt) and the values of
-Tables 1 and 2: results/table_canal.json.
+Tables I and II: results/table_canal.json.
 Usage:  python src/make_fig_canal.py"""
 import json
 import warnings
@@ -89,7 +89,7 @@ def main():
     fig.subplots_adjust(left=0.1, right=0.985, top=0.84, bottom=0.09)
     save(fig, "Fig2_canal")
 
-    # ---- values for Tables 1 and 2
+    # ---- values for Tables I and II
     t = reach_table()
     st, checks = load_structures()
     xm = 0.5 * (c.x[1:] + c.x[:-1])

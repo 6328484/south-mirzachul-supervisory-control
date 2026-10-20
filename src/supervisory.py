@@ -1,5 +1,5 @@
 """
-Two-layer control: local FF/P layer + supervisory layer (local layer Sect. 3.4, Eqs. 25-31; supervisory layer Sect. 3.5, Eqs. 32-37)
+Two-layer control: local FF/P layer + supervisory layer (local layer Sect. IV-D, Eqs. 25-31; supervisory layer Sect. IV-E, Eqs. 32-37)
 ===================================================================
 Local layer (the same for all strategies): the seven check gates and the tail gate hold the depth
 upstream of them at the set-point h_set. Every hour, the target discharge of gate k combines a
