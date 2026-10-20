@@ -5,7 +5,7 @@ title: "Supervisory gate control of the South Mirzachul main canal under supply 
 abstract: >-
   Code, input data, trained controllers and simulation results for the article
   "Neural supervisory gate control for sharing a supply shortage in a large
-  irrigation main canal: benchmark against an optimized rule and robustness tests".
+  irrigation main canal".
   The study tests whether a neural supervisory controller, trained by an evolution
   strategy on a one-dimensional Saint-Venant model of the 123.7-km South Mirzachul
   main canal (Uzbekistan), shares a supply shortage more equitably than a fixed rule
@@ -14,7 +14,7 @@ abstract: >-
   roughness uncertainty, measurement noise and equipment faults. The repository
   contains everything needed to rebuild Tables 1–6, Table B.1 and Figs. 2–9 of the article.
   Code: MIT licence; data, results and figures: CC BY 4.0 (see LICENSE-DATA.md).
-version: "1.0.0"
+version: "1.1.0"
 doi: 10.5281/zenodo.23494009
 license: MIT
 repository-code: "https://github.com/6328484/south-mirzachul-supervisory-control"
@@ -27,11 +27,19 @@ authors:
     given-names: Zafar A.
     orcid: "https://orcid.org/0009-0000-3938-7562"
     affiliation: "National University of Uzbekistan named after Mirzo Ulugbek, Tashkent, Uzbekistan"
-    email: abdujabborovzafar518@gmail.com
+    email: abdujabborov_za@nuu.uz
   - family-names: Choriyorov
     given-names: Nurbek Q.
     orcid: "https://orcid.org/0000-0001-7289-0303"
     affiliation: "Research Institute of Irrigation and Water Problems; University of World Economy and Diplomacy, Tashkent, Uzbekistan"
+  - family-names: Yadgarov
+    given-names: Sherzod A.
+    orcid: "https://orcid.org/0009-0002-5942-015X"
+    affiliation: "Nukus State Technical University, Nukus, Uzbekistan"
+  - family-names: Haydarova
+    given-names: Roziya D.
+    orcid: "https://orcid.org/0009-0007-8346-858X"
+    affiliation: "Department of Algebra and Geometry, Termez State University, Termez, Uzbekistan"
 keywords:
   - irrigation canal automation
   - equitable water distribution
@@ -54,7 +62,7 @@ references:
         given-names: Nurbek Q.
 preferred-citation:
   type: article
-  title: "Neural supervisory gate control for sharing a supply shortage in a large irrigation main canal: benchmark against an optimized rule and robustness tests"
+  title: "Neural supervisory gate control for sharing a supply shortage in a large irrigation main canal"
   status: submitted
   year: 2026
   authors:
@@ -67,3 +75,9 @@ preferred-citation:
     - family-names: Choriyorov
       given-names: Nurbek Q.
       orcid: "https://orcid.org/0000-0001-7289-0303"
+    - family-names: Yadgarov
+      given-names: Sherzod A.
+      orcid: "https://orcid.org/0009-0002-5942-015X"
+    - family-names: Haydarova
+      given-names: Roziya D.
+      orcid: "https://orcid.org/0009-0007-8346-858X"
