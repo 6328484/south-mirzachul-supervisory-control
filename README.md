@@ -167,7 +167,9 @@ Please cite the article (see `CITATION.cff`) when you use the code or data.
 
 ## Use of AI assistance
 
-As stated in the article, the authors used Claude (Anthropic) to assist in developing the code, running the computational experiments and preparing the figures. The authors directed this work and checked the code and the results.
+### Use of AI Assistance
+
+During the preparation of this manuscript, the authors used Claude (Anthropic) solely for language editing and improving grammatical accuracy and clarity. The authors reviewed and approved the final text and take full responsibility for the content of the manuscript.
 
 ## Contact
 
