@@ -169,7 +169,9 @@ Please cite the article (see `CITATION.cff`) when you use the code or data.
 
 ### Use of AI Assistance
 
-During the preparation of this manuscript, the authors used Claude (Anthropic) solely for language editing and improving grammatical accuracy and clarity. The authors reviewed and approved the final text and take full responsibility for the content of the manuscript.
+The study was directed by the authors and builds on the Saint-Venant model and the canal passport data of Seytov (2018). Under the authors' direction, Claude (Anthropic) was used to assist in implementing the simulation and training code, running the computational experiments, preparing the figures, searching the literature and drafting and language editing of the article. The authors checked the code, the numerical results and every cited source, and take full responsibility for the content.
+
+Every number, table and figure of the article can be regenerated from this repository with `run_all.sh` (see the table above), so all results can be verified independently of how the code was written.
 
 ## Contact
 
