@@ -1,11 +1,11 @@
 """
-Two-layer control: local FF/P layer + supervisory layer (Sect. 3.3)
+Two-layer control: local FF/P layer + supervisory layer (local layer Sect. 3.4, Eqs. 25-31; supervisory layer Sect. 3.5, Eqs. 32-37)
 ===================================================================
 Local layer (the same for all strategies): the seven check gates and the tail gate hold the depth
 upstream of them at the set-point h_set. Every hour, the target discharge of gate k combines a
 feedforward of the measured water balance of the pool upstream of the gate with a proportional
 correction of the level error (FF/P):
-    Q_k = Q_in,k - sum(offtake withdrawals in the pool) + A_k * (h_k - h_set,k) / Tc,   Tc = 4 h
+    Q_k = Q_in,k - sum(offtake withdrawals in the pool) + F_k * (h_k - h_set,k) / Tc,   Tc = 4 h   (Eq. 28)
 and the opening follows from the gate equation with the measured head difference:
     a_k = Q_k / (mu * W_k * sqrt(2 g dY_k)).
 A gate moves by at most 0.30 m per hour and does not move if the required change is below 1 cm.
@@ -36,10 +36,10 @@ class LocalLayer:
     """Local layer: feedforward (water balance) + level feedback.
     Target discharge of each gate k (water balance of the pool upstream of it):
         Q_k = Q_in,k - sum(offtake withdrawals in the pool)          (feedforward)
-              + A_k * (h_u,k - h_set,k) / Tc  [+ integral, disabled]  (feedback)
+              + F_k * (h_u,k - h_set,k) / Tc  [+ integral, disabled]  (feedback)
     Q_in,k is the measured discharge entering the pool from the upstream gate (the head discharge for
     the first pool), so the travel time of the wave is taken into account automatically.
-    A_k is the water-surface area of the pool upstream of the gate, Tc the correction time.
+    F_k is the water-surface area of the pool upstream of the gate, Tc the correction time.
     The gate opening follows from the gate equation with the measured upstream and downstream levels:
         a_k = Q_k / (mu * W_k * sqrt(2 g dY_k)).
     All quantities are measurable by SCADA or known from the passport."""

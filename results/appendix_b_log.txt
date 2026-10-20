@@ -1,0 +1,17 @@
+Check structure PK145 (right + left channel) L= 14.50 F=1.019 Q= 286.6 t= 32/ 43 min  e_inf=0.45/-0.37 m  decay=0.85
+Check structure PK400                    L= 25.50 F=1.732 Q= 234.4 t= 58/ 76 min  e_inf=0.22/-0.18 m  decay=0.79
+Check structure PK623+86                 L= 22.39 F=1.485 Q= 203.5 t= 52/ 67 min  e_inf=0.22/-0.18 m  decay=0.69
+Check structure PK746+62                 L= 12.28 F=0.479 Q=  78.0 t= 32/ 43 min  e_inf=0.26/-0.21 m  decay=0.74
+Check structure PK923+02                 L= 17.64 F=0.617 Q=  64.4 t= 50/ 67 min  e_inf=0.17/-0.14 m  decay=0.69
+Check structure PK1087+23                L= 16.42 F=0.402 Q=  34.7 t= 51/ 72 min  e_inf=0.14/-0.11 m  decay=0.63
+Check structure PK1177+29                L=  9.01 F=0.172 Q=  14.0 t= 30/ 38 min  e_inf=0.13/-0.11 m  decay=0.69
+Check structure PK1237+00                L=  5.97 F=0.111 Q=  14.0 t= 21/ 25 min  e_inf=0.20/-0.17 m  decay=0.67
+Courant [ 8.6 13.5] Froude max 0.177
+d=0: max|root|=0.750  bound=2.000
+d=1: max|root|=0.500  bound=1.000
+d=2: max|root|=0.772  bound=0.618
+d=3: max|root|=0.889  bound=0.445
+d=4: max|root|=0.949  bound=0.347
+d=5: max|root|=0.983  bound=0.285
+d=6: max|root|=1.004  bound=0.241
+d=7: max|root|=1.017  bound=0.209

@@ -1,4 +1,4 @@
-"""Test scenarios (Table 3; not used in training) and training cases (Sect. 3.4)."""
+"""Test scenarios (Table 3; not used in training) and training cases (Sect. 3.6, Eq. 40)."""
 import itertools
 
 

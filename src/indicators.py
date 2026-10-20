@@ -1,4 +1,4 @@
-"""Additional delivery indicators (Sect. 3.2, Table 5): Molden and Gates (1990) adequacy, dependability and equity,
+"""Additional delivery indicators (Sect. 3.2, Eqs. 17-18, Table 5): Molden and Gates (1990) adequacy, dependability and equity,
 and the Gini coefficient of the time-averaged delivery ratios of the nine groups (t = 24-72 h)."""
 import numpy as np
 

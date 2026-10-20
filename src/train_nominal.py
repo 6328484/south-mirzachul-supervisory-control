@@ -1,4 +1,4 @@
-"""Training of the neural supervisor on the nominal canal (Sect. 3.4).
+"""Training of the neural supervisor on the nominal canal (Sect. 3.6, Eqs. 40-44).
 OpenAI-ES with antithetic sampling (8 pairs = 16 candidates per generation, sigma = 0.1), centred-rank
 utilities and Adam (step size 0.05). Each candidate is scored by the sum of the objective J
 (objective.py) over three 72-h training episodes with f = 0.7, 0.8 and 0.9. The best candidate

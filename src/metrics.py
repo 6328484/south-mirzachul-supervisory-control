@@ -1,5 +1,5 @@
 """
-Level-safety and gate-effort indicators (Sects. 3.2 and 3.6)
+Level-safety and gate-effort indicators (Sects. 3.2 and 3.8)
 ============================================================
 Level limits (no official operating limits are published; taken from the passport):
   upper: depth at Qmax (calibrated initial state)

@@ -1,5 +1,5 @@
 """
-South Mirzachul main canal: Saint-Venant model with gated check structures (Sect. 3.1)
+South Mirzachul main canal: Saint-Venant model with gated check structures (Sect. 3.1, Eqs. 1-14; discretisation Appendix A)
 =====================================================================================
 Data: the canal passport as reproduced in Seytov A.J. (2018), Appendix 2; data/structures.csv.
 

@@ -38,15 +38,15 @@ box(4, 68, 81, 20, "Offline training (evolution strategy)",
     r"5 seeds × 100 generations, then 40 with $n/n_0$ = 0.9–1.3")
 # supervisory layer
 box(4, 34, 81, 29.5, "Supervisory layer (every 1 h)",
-    "Neural network 11 → 8 → 12  (or fixed rule)\n"
+    "Neural network 11 → 8 → 12, or fixed or staged rule\n"
     "Inputs: head supply ratio f, depths upstream of\n"
     "9 check structures, tail outflow\n"
     "Outputs: 7 level set-points (within allowed range),\n"
     "5 branch-regulator openings u (steps ≥ 5 %)", edge=BLUE, face=BLUE_L, lw=1.0)
 # local layer
 box(4, 4, 81, 26, "Local layer FF/P (every 1 h, 8 gates)",
-    r"Target flow:  $Q_k = Q_{\mathrm{in},k} - \sum q_{\mathrm{pool}\,k} + A_k\,(h_k - h_{\mathrm{set},k})\,/\,T_c$" "\n"
-    r"Opening (gate equation):  $a_k = Q_k \,/\, [\mu W_k (2g\,\Delta Y_k)^{1/2}]$,  $\mu$ = 0.65" "\n"
+    r"Target flow:  $Q_k^* = Q_{\mathrm{in},k} - q_{\mathrm{pool},k} + F_k\,(h_k - h_{\mathrm{set},k})\,/\,T_c$" "\n"
+    r"Opening (gate equation):  $a_k^* = Q_k^* \,/\, [\mu W_k (2g\,\Delta Y_k)^{1/2}]$,  $\mu$ = 0.65" "\n"
     "Dead band 1 cm, at most 0.30 m per hour\n"
     "Same layer for all supervisors and the benchmark")
 # canal
@@ -64,7 +64,7 @@ box(112, 4, 58, 84, "Canal (South Mirzachul, 123.7 km)",
     "All controller inputs are\n"
     "measurable by SCADA")
 
-arrow((44.5, 68), (44.5, 63.5), "policy weights θ", lx=1.5, ha="left")
+arrow((44.5, 68), (44.5, 63.5), r"policy parameters $\mathbf{w}$", lx=1.5, ha="left")
 arrow((44.5, 34), (44.5, 30), "level set-points", lx=1.5, ha="left")
 arrow((85, 13), (112, 13), "gate openings", ly=2.2)
 arrow((85, 42), (112, 42), "branch openings u", ly=2.2)

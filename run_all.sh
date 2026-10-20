@@ -38,3 +38,4 @@ python src/robustness_tests.py > results/robustness_tests_log.txt
 python src/make_fig_canal.py
 python src/fig_architecture.py
 python src/make_figures.py
+python src/appendix_b.py > results/appendix_b_log.txt

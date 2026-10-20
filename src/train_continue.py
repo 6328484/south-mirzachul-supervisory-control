@@ -1,4 +1,4 @@
-"""Continued training of the nominal policies for 40 more generations (Sects. 3.4 and 4.6).
+"""Continued training of the nominal policies for 40 more generations (Sects. 3.6 and 4.6).
 Two variants; all other settings are identical (ES, population, sigma, learning rate, generations):
   randomised — randomised roughness: f in {0.7, 0.8, 0.9} x n/n0 in {0.9, 1.0, 1.1, 1.3};
                each generation uses 4 of the 12 combinations (common to all candidates); the policy is
