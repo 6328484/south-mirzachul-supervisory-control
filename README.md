@@ -1,5 +1,9 @@
 # Supervisory gate control of the South Mirzachul main canal under supply shortage
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23494009.svg)](https://doi.org/10.5281/zenodo.23494009)
+
+Archived on Zenodo: https://doi.org/10.5281/zenodo.23494009 (all versions; v1.0.0: https://doi.org/10.5281/zenodo.23494010).
+
 Code, input data, trained controllers and simulation results for the article
 
 > Seytov A.J., Abdujabborov Z.A., Choriyorov N.Q. **Neural supervisory gate control for sharing a supply shortage in a large irrigation main canal: benchmark against an optimized rule and robustness tests.** Manuscript submitted for publication.

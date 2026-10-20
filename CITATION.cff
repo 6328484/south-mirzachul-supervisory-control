@@ -12,9 +12,10 @@ abstract: >-
   and than a transparent rule optimized with the same algorithm and budget, using
   only the gates that the canal already has. It also tests the controllers under
   roughness uncertainty, measurement noise and equipment faults. The repository
-  contains everything needed to rebuild Tables 1–6 and Figs. 2–9 of the article.
+  contains everything needed to rebuild Tables 1–6, Table B.1 and Figs. 2–9 of the article.
   Code: MIT licence; data, results and figures: CC BY 4.0 (see LICENSE-DATA.md).
 version: "1.0.0"
+doi: 10.5281/zenodo.23494009
 license: MIT
 repository-code: "https://github.com/6328484/south-mirzachul-supervisory-control"
 authors:
