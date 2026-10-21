@@ -6,7 +6,7 @@ Archived on Zenodo: https://doi.org/10.5281/zenodo.23494009 (all versions; v1.0.
 
 Code, input data, trained controllers and simulation results for the article
 
-> Seytov A.J., Abdujabborov Z.A., Choriyorov N.Q., Yadgarov S.A., Haydarova R.D., Abdumannopova M.J. **Neural supervisory gate control for sharing a supply shortage in a large irrigation main canal.** Manuscript submitted for publication.
+> Abdujabborov Z.A., Seytov A.J., Choriyorov N.Q., Haydarova R.D., Abdumannopova M.J., Esonturdiyev M.N. **Neural supervisory gate control for sharing a supply shortage in a large irrigation main canal.** Manuscript submitted for publication.
 
 The study tests whether a neural supervisory controller can share a supply shortage more equitably among the offtakes of the 123.7-km South Mirzachul main canal (Uzbekistan), and whether a transparent rule optimized with the same algorithm and budget does as well. Both operate only gates that the canal already has: seven check gates, the tail gate and the regulators of five major branches. The controllers are also tested under roughness uncertainty, measurement noise and equipment faults. Everything runs on a one-dimensional Saint-Venant model of the canal built from its passport. The repository contains everything needed to rebuild Tables I–VI and Figs. 2–9 of the article, either from the stored results (about 1 min), by re-simulating the stored controllers (about 25 min) or by retraining from scratch (about 13 h on two CPU cores).
 

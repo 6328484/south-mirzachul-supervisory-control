@@ -1,6 +1,6 @@
 # Licence for data, results and figures
 
-The contents of `data/`, `results/` and `figures/` are © 2026 Aybek J. Seytov, Zafar A. Abdujabborov, Nurbek Q. Choriyorov, Sherzod A. Yadgarov, Roziya D. Haydarova and Mamura J. Abdumannopova and are licensed under the **Creative Commons Attribution 4.0 International licence (CC BY 4.0)**.
+The contents of `data/`, `results/` and `figures/` are © 2026 Zafar A. Abdujabborov, Aybek J. Seytov, Nurbek Q. Choriyorov, Roziya D. Haydarova, Mamura J. Abdumannopova and Mamamatqobil N. Esonturdiyev and are licensed under the **Creative Commons Attribution 4.0 International licence (CC BY 4.0)**.
 
 Full legal text: https://creativecommons.org/licenses/by/4.0/legalcode
 
