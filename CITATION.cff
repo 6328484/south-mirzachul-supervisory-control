@@ -14,7 +14,7 @@ abstract: >-
   roughness uncertainty, measurement noise and equipment faults. The repository
   contains everything needed to rebuild Tables I–VI, Table B.1 (Supplementary Material) and Figs. 2–9 of the article.
   Code: MIT licence; data, results and figures: CC BY 4.0 (see LICENSE-DATA.md).
-version: "1.1.0"
+version: "1.1.1"
 doi: 10.5281/zenodo.23494009
 license: MIT
 repository-code: "https://github.com/6328484/south-mirzachul-supervisory-control"
@@ -40,6 +40,10 @@ authors:
     given-names: Roziya D.
     orcid: "https://orcid.org/0009-0007-8346-858X"
     affiliation: "Department of Algebra and Geometry, Termez State University, Termez, Uzbekistan"
+  - family-names: Abdumannopova
+    given-names: Mamura J.
+    orcid: "https://orcid.org/0009-0000-8605-5798"
+    affiliation: "Department of Computational Mathematics and Information Systems, National University of Uzbekistan named after Mirzo Ulugbek, Tashkent, Uzbekistan"
 keywords:
   - irrigation canal automation
   - equitable water distribution
@@ -81,3 +85,6 @@ preferred-citation:
     - family-names: Haydarova
       given-names: Roziya D.
       orcid: "https://orcid.org/0009-0007-8346-858X"
+    - family-names: Abdumannopova
+      given-names: Mamura J.
+      orcid: "https://orcid.org/0009-0000-8605-5798"
