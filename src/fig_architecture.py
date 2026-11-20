@@ -1,4 +1,4 @@
-"""Fig. 3: scheme of the two-layer control.
+"""Fig. 2: scheme of the two-layer control.
 Output: figures/Fig3_architecture.png/.pdf/.eps
 Usage:  python src/fig_architecture.py"""
 import matplotlib

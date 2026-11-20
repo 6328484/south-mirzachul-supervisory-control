@@ -1,5 +1,5 @@
 """
-Evaluation of all strategies (Sects. IV-H and V)
+Evaluation of all strategies (Training and Evaluation; Results)
 ===============================================
 1) The four test scenarios (scenarios.py; not used in training), strategies:
    none               — no control (gates keep their calibrated openings)
@@ -11,7 +11,7 @@ Evaluation of all strategies (Sects. IV-H and V)
    fcb                — full-control benchmark (benchmark.py)
 2) Robustness: f = 0.8, roughness multiplier n/n0 = 0.8 ... 1.4
    (training values: nominal 1.0; randomised 0.9, 1.0, 1.1, 1.3)
-3) Objective J of every policy on the 12 supply/roughness training combinations (Fig. 4b).
+3) Objective J of every policy on the 12 supply/roughness training combinations (Fig. S2b).
 Indicators:
   delivery (mean over 24-72 h): group ratios, CV, worst group, demand-weighted delivery
   levels (0-72 h): violation point-hours, longest violation at one point, largest rise above / drop below

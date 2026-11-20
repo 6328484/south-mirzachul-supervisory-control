@@ -6,9 +6,9 @@ Archived on Zenodo: https://doi.org/10.5281/zenodo.23494009 (all versions; v1.0.
 
 Code, input data, trained controllers and simulation results for the article
 
-> Abdujabborov Z.A., Seytov A.J., Choriyorov N.Q., Seytimbetov D.M., Abdumannopova M.J., Esonturdiyev M.N. **Neural supervisory gate control for sharing a supply shortage in a large irrigation main canal.** Manuscript submitted for publication.
+> Abdujabborov Z.A., Seytov A.J., Choriyorov N.Q., Seytimbetov D.M., Abdumannopova M.J., Esonturdiyev M.N. **Neural supervisory gate control for sharing a supply shortage in a large irrigation main canal.** Manuscript submitted to the *Journal of Water Resources Planning and Management* (ASCE).
 
-The study tests whether a neural supervisory controller can share a supply shortage more equitably among the offtakes of the 123.7-km South Mirzachul main canal (Uzbekistan), and whether a transparent rule optimized with the same algorithm and budget does as well. Both operate only gates that the canal already has: seven check gates, the tail gate and the regulators of five major branches. The controllers are also tested under roughness uncertainty, measurement noise and equipment faults. Everything runs on a one-dimensional Saint-Venant model of the canal built from its passport. The repository contains everything needed to rebuild Tables I–VI and Figs. 2–9 of the article, either from the stored results (about 1 min), by re-simulating the stored controllers (about 25 min) or by retraining from scratch (about 13 h on two CPU cores).
+The study tests whether a neural supervisory controller can share a supply shortage more equitably among the offtakes of the 123.7-km South Mirzachul main canal (Uzbekistan), and whether a transparent rule optimized with the same algorithm and budget does as well. Both operate only gates that the canal already has: seven check gates, the tail gate and the regulators of five major branches. The controllers are also tested under roughness uncertainty, measurement noise and equipment faults. Everything runs on a one-dimensional Saint-Venant model of the canal built from its passport. The repository contains everything needed to rebuild Table 1 and Figs. 2–5 of the article and Tables S1–S6 and Figs. S1–S4 of its Supplemental Materials, either from the stored results (about 1 min), by re-simulating the stored controllers (about 25 min) or by retraining from scratch (about 13 h on two CPU cores).
 
 ## Relation to an earlier archive
 
@@ -29,7 +29,7 @@ src/
   supervisory.py               local FF/P layer; current practice, rule and neural supervisors
   metrics.py                   level-safety and gate-effort indicators
   objective.py                 training objective J
-  scenarios.py                 test scenarios (Table III) and training cases
+  scenarios.py                 test scenarios (Table S4) and training cases
   train_nominal.py             evolution-strategy training on the nominal canal (100 generations)
   train_continue.py            40 further generations, nominal or with randomised roughness
   staged_rule.py               optimized staged rule (24 parameters), the fair benchmark of the network
@@ -39,9 +39,9 @@ src/
   robustness_tests.py          measurement-noise and fault tests
   benchmark.py                 full-control benchmark (theoretical reference)
   evaluate.py                  evaluation of all strategies, robustness sweep, validation of the policies
-  make_fig_canal.py            Fig. 2 and the values of Tables I–II
-  fig_architecture.py          Fig. 3
-  make_figures.py              Figs. 4–9 and Table IV
+  make_fig_canal.py            Fig. S1 and the values of Tables S1–S2
+  fig_architecture.py          Fig. 2
+  make_figures.py              Figs. 3–5, Figs. S2–S4 and Table 1
   paths.py                     file locations
 results/
   policies/                    trained parameters (.npy): neural supervisors and full-control benchmark
@@ -50,8 +50,8 @@ results/
   robustness.json              indicators for roughness multipliers n/n0 = 0.8–1.4
   validation.json              objective J of every policy on the 12 supply/roughness training cases
   timeseries.npz               depths and delivery ratios over time
-  table_results.csv/.md        Table IV
-  table_canal.json             values of Tables I and II
+  table_results.csv/.md        Table 1
+  table_canal.json             values of Tables S1 and S2
   evaluation_log.txt           console output of src/evaluate.py, including numerical diagnostics
   results_extra.json           staged rule and effort variants in the four test scenarios
   robustness_extra.json        staged rule in the roughness sweep
@@ -59,29 +59,31 @@ results/
   timeseries_extra.npz         time series of the staged-rule and effort runs
   indicators.json              Molden-Gates indicators of the runs in timeseries.npz
   robustness_noise_faults.json noise and fault tests
-figures/                       Figs. 2–9 (.png, 300 dpi; .pdf)
+figures/                       Figs. 2–5 and S1–S4 (.png, 300 dpi; .pdf; file names keep the numbering of an earlier draft, see below)
 run_all.sh                     the complete pipeline in order
 ```
 
 ## Where each result of the article comes from
 
+Numbering of the article and of its Supplemental Materials (prefix S). The figure files keep the numbering of an earlier draft of the article; the table gives both.
+
 | Article | Produced by | Files |
 | --- | --- | --- |
-| Table I (reaches), Table II (check structures) | `src/make_fig_canal.py` | `results/table_canal.json`, `data/structures.csv`, `PASSPORT` in `src/gated_model.py` |
-| Table III (test scenarios) | — | `src/scenarios.py` |
-| Table IV (indicators) | `src/make_figures.py` | `results/table_results.csv`, `.md` (from `results/results.json`) |
+| Table 1 (performance of the supervisors) | `src/make_figures.py` | `results/table_results.csv`, `.md` (from `results/results.json`) |
 | Fig. 1 (location map) | not reproducible here: the Google Earth background imagery is not redistributed | route: `data/canal_route.json` |
-| Fig. 2 (canal in the model) | `src/make_fig_canal.py` | `figures/Fig2_canal.*` |
-| Fig. 3 (two-layer control) | `src/fig_architecture.py` | `figures/Fig3_architecture.*` |
-| Fig. 4 (training) | `src/make_figures.py` | `figures/Fig4_training.*` (from `results/training_logs/`, `results/validation.json`) |
-| Fig. 5 (delivery equity) | `src/make_figures.py` | `figures/Fig5_shares.*` (from `results/results.json`) |
-| Fig. 6 (water levels) | `src/make_figures.py` | `figures/Fig6_levels.*` (from `results/timeseries.npz`) |
-| Fig. 7 (gate effort) | `src/make_figures.py` | `figures/Fig7_gates.*` (from `results/results.json`) |
-| Fig. 8 (gate-effort trade-off) | `src/make_figures.py` | `figures/Fig8_effort.*` (from `results/results.json`, `results/results_extra.json`) |
-| Fig. 9 (roughness sensitivity) | `src/make_figures.py` | `figures/Fig9_robustness.*` (from `results/robustness.json`, `results/robustness_extra.json`) |
-| Table V (Molden–Gates indicators) | `src/evaluate_extra.py` | `results/results_extra.json`, `results/indicators.json` |
-| Table VI (noise and faults) | `src/robustness_tests.py` | `results/robustness_noise_faults.json` |
-| Table B.1 (Supplementary Material) and the numbers of Appendices A–B of the Supplementary Material (pool travel times, steady error under a gate-coefficient error, set-point step response, delay-stability bound, Courant and Froude numbers) | `src/appendix_b.py` | `results/appendix_b.json` |
+| Fig. 2 (two-layer control) | `src/fig_architecture.py` | `figures/Fig3_architecture.*` |
+| Fig. 3 (delivery equity) | `src/make_figures.py` | `figures/Fig5_shares.*` (from `results/results.json`) |
+| Fig. 4 (water levels) | `src/make_figures.py` | `figures/Fig6_levels.*` (from `results/timeseries.npz`) |
+| Fig. 5 (roughness sensitivity) | `src/make_figures.py` | `figures/Fig9_robustness.*` (from `results/robustness.json`, `results/robustness_extra.json`) |
+| Table S1 (reaches), Table S2 (check structures) | `src/make_fig_canal.py` | `results/table_canal.json`, `data/structures.csv`, `PASSPORT` in `src/gated_model.py` |
+| Table S3 (pools of the local layer) and the numbers of Sections S2–S3 (pool travel times, steady error under a gate-coefficient error, set-point step response, delay-stability bound, Courant and Froude numbers) | `src/appendix_b.py` | `results/appendix_b.json` |
+| Table S4 (test scenarios) | — | `src/scenarios.py` |
+| Table S5 (Molden–Gates indicators) | `src/evaluate_extra.py` | `results/results_extra.json`, `results/indicators.json` |
+| Table S6 (noise and faults) | `src/robustness_tests.py` | `results/robustness_noise_faults.json` |
+| Fig. S1 (canal in the model) | `src/make_fig_canal.py` | `figures/Fig2_canal.*` |
+| Fig. S2 (training) | `src/make_figures.py` | `figures/Fig4_training.*` (from `results/training_logs/`, `results/validation.json`) |
+| Fig. S3 (gate effort) | `src/make_figures.py` | `figures/Fig7_gates.*` (from `results/results.json`) |
+| Fig. S4 (gate-effort trade-off) | `src/make_figures.py` | `figures/Fig8_effort.*` (from `results/results.json`, `results/results_extra.json`) |
 
 ## Reproducing the results
 
@@ -118,11 +120,11 @@ Step 2 rewrites `results/results.json`, `robustness.json`, `validation.json` and
 
 ## Model and controllers in brief
 
-- **Hydrodynamic model** (`src/gated_model.py`, Sect. IV-A). One-dimensional Saint-Venant equations with lateral outflow, discretised with the four-point implicit Preissmann scheme (θ = 0.6) on 132 nodes (123 segments of about 1 km and eight zero-length check structures) with a 30-min time step and Newton iteration. Each of the ten passport reaches has a prismatic trapezoidal section. Check structures follow the gate equation Q = μ a<sub>e</sub> W √(2g ΔY), a<sub>e</sub> = min(a, h<sub>u</sub>), μ = 0.65. Offtakes draw q = u q⁰ (h/h⁰)<sup>1/2</sup>. The model is calibrated to the passport depths at Qmax = 300 m³/s (`src/canal_setup.py`). One 72-h simulation takes about 0.9 s.
-- **Local FF/P layer** (`src/supervisory.py`, Sect. IV-D). Every hour, each of the seven check gates and the tail gate computes a target discharge from the measured water balance of its pool plus a proportional level correction (Tc = 4 h) and converts it into an opening with the gate equation. A gate moves by at most 0.30 m per hour and not at all for changes below 1 cm.
-- **Supervisors** (`src/supervisory.py`, `src/staged_rule.py`, Sect. IV-E). *Current practice*: set-points at h<sub>up</sub> − 0.10 m, branches fully open. *Rule*: branch regulators at u = f<sup>1.5</sup>. *Neural*: a multilayer perceptron 11 → 8 → 12 (204 parameters) that sets the seven level set-points and the five branch openings from measured quantities (f, nine depths, tail outflow). It reproduces the rule when its outputs are zero.
-- **Training** (`src/train_nominal.py`, `src/train_continue.py`, Sect. IV-F). OpenAI-ES with 8 antithetic pairs per generation (σ = 0.1), centred-rank utilities and Adam (step 0.05). Each candidate is scored on three 72-h episodes with f = 0.7, 0.8 and 0.9 by the objective J in `src/objective.py`. Five seeds × 100 generations, followed by 40 generations either on the nominal canal or with randomised roughness n/n0 ∈ {0.9, 1.0, 1.1, 1.3}.
-- **Full-control benchmark** (`src/benchmark.py`, Sect. IV-G). A theoretical reference, **not** a description of the existing gates of the canal. It assumes that all 58 offtakes are adjustable and that the scenario is known in advance. It adds open-loop corrections in three 24-h blocks (195 parameters) to the neural policy and is optimised separately for each scenario without a gate-movement penalty.
+- **Hydrodynamic model** (`src/gated_model.py`; Hydrodynamic Model, Sections S1–S2). One-dimensional Saint-Venant equations with lateral outflow, discretised with the four-point implicit Preissmann scheme (θ = 0.6) on 132 nodes (123 segments of about 1 km and eight zero-length check structures) with a 30-min time step and Newton iteration. Each of the ten passport reaches has a prismatic trapezoidal section. Check structures follow the gate equation Q = μ a<sub>e</sub> W √(2g ΔY), a<sub>e</sub> = min(a, h<sub>u</sub>), μ = 0.65. Offtakes draw q = u q⁰ (h/h⁰)<sup>1/2</sup>. The model is calibrated to the passport depths at Qmax = 300 m³/s (`src/canal_setup.py`). One 72-h simulation takes about 0.9 s.
+- **Local FF/P layer** (`src/supervisory.py`; Local Layer, Section S3). Every hour, each of the seven check gates and the tail gate computes a target discharge from the measured water balance of its pool plus a proportional level correction (Tc = 4 h) and converts it into an opening with the gate equation. A gate moves by at most 0.30 m per hour and not at all for changes below 1 cm.
+- **Supervisors** (`src/supervisory.py`, `src/staged_rule.py`; Supervisory Layer, Section S4). *Current practice*: set-points at h<sub>up</sub> − 0.10 m, branches fully open. *Rule*: branch regulators at u = f<sup>1.5</sup>. *Neural*: a multilayer perceptron 11 → 8 → 12 (204 parameters) that sets the seven level set-points and the five branch openings from measured quantities (f, nine depths, tail outflow). It reproduces the rule when its outputs are zero.
+- **Training** (`src/train_nominal.py`, `src/train_continue.py`; Training and Evaluation, Section S5). OpenAI-ES with 8 antithetic pairs per generation (σ = 0.1), centred-rank utilities and Adam (step 0.05). Each candidate is scored on three 72-h episodes with f = 0.7, 0.8 and 0.9 by the objective J in `src/objective.py`. Five seeds × 100 generations, followed by 40 generations either on the nominal canal or with randomised roughness n/n0 ∈ {0.9, 1.0, 1.1, 1.3}.
+- **Full-control benchmark** (`src/benchmark.py`; Supervisory Layer, Section S4). A theoretical reference, **not** a description of the existing gates of the canal. It assumes that all 58 offtakes are adjustable and that the scenario is known in advance. It adds open-loop corrections in three 24-h blocks (195 parameters) to the neural policy and is optimised separately for each scenario without a gate-movement penalty.
 
 ## Result files
 
@@ -156,7 +158,7 @@ A staged-rule policy file holds 24 values: x (5), y (5), c (7), d (7), with the 
 
 ## Data and limitations
 
-All model data come from the canal passport (compiled around 2000 and reproduced in Seytov 2018); field measurements were not available. The model therefore describes the canal as designed and was not validated against observed levels, discharges or gate positions. The passport gives no sill or bed elevations at the structures, so the bed was taken as continuous and the effective gate widths were enlarged at three structures. The level limits are passport depths at Qmin and Qmax, and the 0.15 m/h drawdown limit is an external benchmark (Wu et al. 2021). See `data/README.md` and Sect. VI-D of the article for details.
+All model data come from the canal passport (compiled around 2000 and reproduced in Seytov 2018); field measurements were not available. The model therefore describes the canal as designed and was not validated against observed levels, discharges or gate positions. The passport gives no sill or bed elevations at the structures, so the bed was taken as continuous and the effective gate widths were enlarged at three structures. The level limits are passport depths at Qmin and Qmax, and the 0.15 m/h drawdown limit is an external benchmark (Wu et al. 2021). See `data/README.md` and the section "Transfer to the Real Canal and Limitations" of the article for details.
 
 ## Licence
 

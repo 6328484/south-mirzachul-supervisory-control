@@ -1,9 +1,10 @@
-"""Figures 4-9 and Table IV of the article.
+"""Figs. 3-5 and Table 1 of the article and Figs. S2-S4 of its Supplemental Materials
+(files Fig5_shares, Fig6_levels, Fig9_robustness; Fig4_training, Fig7_gates, Fig8_effort).
 Input:  results/results.json, results/results_extra.json, results/timeseries.npz, results/timeseries_extra.npz,
         results/robustness.json, results/robustness_extra.json, results/validation.json,
         results/validation_extra.json, results/training_logs/*.csv
 Output: figures/Fig4_training, Fig5_shares, Fig6_levels, Fig7_gates, Fig8_effort, Fig9_robustness
-        (.png 300 dpi, .pdf, .eps), results/table_results.csv, results/table_results.md (Table IV).
+        (.png 300 dpi, .pdf, .eps), results/table_results.csv, results/table_results.md (Table 1).
 Width <= 174 mm, Liberation Sans (metric-compatible with Arial) 8 pt.
 Usage:  python src/make_figures.py"""
 import json
@@ -67,7 +68,7 @@ def handle(m, band=None):
     return (Patch(color=band, lw=0), line) if band else line
 
 
-# ---------------------------------------------------------------- training curves (Fig. 4)
+# ---------------------------------------------------------------- training curves (Fig. S2)
 def fig_training():
     """(a) nominal training: neural supervisor 100 generations + 40 continued nominal generations (control),
     5 seeds; staged rule 100 generations, 3 seeds; (b) objective J on the 12 randomisation cases."""
@@ -129,7 +130,7 @@ def fig_training():
     save(fig, "Fig4_training")
 
 
-# ---------------------------------------------------------------- delivery shares (Fig. 5)
+# ---------------------------------------------------------------- delivery shares (Fig. 3)
 def fig_shares(R):
     fig, axes = plt.subplots(2, 2, figsize=(174 * MM, 118 * MM), sharey=True, sharex=True)
     x = np.arange(2, 11)
@@ -173,7 +174,7 @@ def fig_shares(R):
     save(fig, "Fig5_shares")
 
 
-# ---------------------------------------------------------------- water levels (Fig. 6)
+# ---------------------------------------------------------------- water levels (Fig. 4)
 def fig_levels(R, T, scen="f=0.75"):
     B = T["bounds__1.0"]; up, lo = B[0], B[1]
     names = ["PK145", "PK400", "PK623+86", "PK746+62", "PK923+02", "PK1035", "PK1087+23", "PK1177+29", "PK1237 (tail)"]
@@ -211,7 +212,7 @@ def fig_levels(R, T, scen="f=0.75"):
     return [names[p] for p in pts]
 
 
-# ---------------------------------------------------------------- gate effort (Fig. 7)
+# ---------------------------------------------------------------- gate effort (Fig. S3)
 def fig_gates(R):
     methods = ["rule", "staged_dr", MAIN, "fcb"]
     xl = {"f=0.75": "f = 0.75", "f=0.85": "f = 0.85", "variable": "Variable\ninflow", "n x1.2": "Roughness\n+20 %"}
@@ -241,7 +242,7 @@ def fig_gates(R):
     save(fig, "Fig7_gates")
 
 
-# ---------------------------------------------------------------- roughness robustness (Fig. 9)
+# ---------------------------------------------------------------- roughness robustness (Fig. 5)
 def fig_robustness(RB):
     ns = sorted({r["n_scale"] for r in RB})
     metrics = [("worst", 100, "Worst offtake group (%)"), ("cv", 1, "CV of delivery"),
@@ -277,7 +278,7 @@ def fig_robustness(RB):
     save(fig, "Fig9_robustness")
 
 
-# ---------------------------------------------------------------- Table IV
+# ---------------------------------------------------------------- Table 1
 def table(R):
     fmt = {"cv": ("{:.3f}", 1), "worst": ("{:.0f}", 100), "violation_hours": ("{:.0f}", 1),
            "max_over_m": ("{:.2f}", 1), "max_under_m": ("{:.2f}", 1), "max_drawdown_rate": ("{:.2f}", 1),
@@ -313,7 +314,7 @@ def table(R):
 
 
 def fig_effort(R):
-    """Trade-off between gate operations and performance, mean over the three nominal test scenarios."""
+    """Fig. S4: trade-off between gate operations and performance, mean over the three nominal test scenarios."""
     nominal = [sc for sc, _, _, n in SCENARIOS if n == 1.0]
     pts = [("rule", None, "Fixed rule"), ("staged_dr", None, "Staged rule"),
            ("neural_ftnom", [0, 1, 2], "Neural, weights x1"), ("neural_w5", None, "Neural, weights x5"),

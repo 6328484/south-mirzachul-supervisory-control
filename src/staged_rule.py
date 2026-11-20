@@ -1,4 +1,4 @@
-"""Optimized staged rule (Sect. IV-E, Eqs. 38-39; training Sect. IV-F): a transparent 24-parameter supervisor that
+"""Optimized staged rule (Supervisory Layer and Section S4; training Section S5): a transparent 24-parameter supervisor that
 is trained like the neural supervisor and serves as the fair benchmark of the network.
 Same two-layer structure and local FF/P layer; the supervisor uses no level measurements:
   branch j:   f~_j = first-order lag of the supply ratio f with time constant tau_j (updated hourly)

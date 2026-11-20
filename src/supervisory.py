@@ -1,11 +1,11 @@
 """
-Two-layer control: local FF/P layer + supervisory layer (local layer Sect. IV-D, Eqs. 25-31; supervisory layer Sect. IV-E, Eqs. 32-37)
+Two-layer control: local FF/P layer + supervisory layer (Local Layer and Section S3; Supervisory Layer and Section S4)
 ===================================================================
 Local layer (the same for all strategies): the seven check gates and the tail gate hold the depth
 upstream of them at the set-point h_set. Every hour, the target discharge of gate k combines a
 feedforward of the measured water balance of the pool upstream of the gate with a proportional
 correction of the level error (FF/P):
-    Q_k = Q_in,k - sum(offtake withdrawals in the pool) + F_k * (h_k - h_set,k) / Tc,   Tc = 4 h   (Eq. 28)
+    Q_k = Q_in,k - sum(offtake withdrawals in the pool) + F_k * (h_k - h_set,k) / Tc,   Tc = 4 h   (Eq. 9 of the article)
 and the opening follows from the gate equation with the measured head difference:
     a_k = Q_k / (mu * W_k * sqrt(2 g dY_k)).
 A gate moves by at most 0.30 m per hour and does not move if the required change is below 1 cm.

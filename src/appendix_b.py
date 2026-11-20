@@ -1,11 +1,11 @@
-"""Appendix B of the article (Supplementary Material): properties of the local FF/P layer, and the numbers quoted in Appendix A.
-Output: results/appendix_b.json (Table B.1 and the checks below), printed summary.
-  - Table B.1: pool length L, surface area F_k at 300 m3/s, outflow Q_k^out, travel times of small waves
-    t_down = sum dx/(c+V), t_up = sum dx/(c-V), steady level error e_inf (Eq. B.6) for eps_mu = -0.1, +0.1,
+"""Section S3 of the Supplemental Materials: properties of the local FF/P layer, and the numbers quoted in Section S2.
+Output: results/appendix_b.json (Table S3 and the checks below), printed summary.
+  - Table S3: pool length L, surface area F_k at 300 m3/s, outflow Q_k^out, travel times of small waves
+    t_down = sum dx/(c+V), t_up = sum dx/(c-V), steady level error e_inf for eps_mu = -0.1, +0.1,
     and the simulated decay of the level error per hour after a set-point step of -0.10 m at t = 48 h
-    (f = 0.85, fixed rule; Eq. B.2 predicts 1 - dt_c/T_c = 0.75)
-  - Levin-May bound 2 cos(d pi / (2d + 1)) and the largest root modulus of z^(d+1) - z^d + kappa (Eqs. B.4-B.5)
-  - Courant and Froude numbers of the grid at 300 m3/s (Appendix A)
+    (f = 0.85, fixed rule; the theory of Section S3 predicts 1 - dt_c/T_c = 0.75)
+  - Levin-May bound 2 cos(d pi / (2d + 1)) and the largest root modulus of z^(d+1) - z^d + kappa
+  - Courant and Froude numbers of the grid at 300 m3/s (Section S2)
 Usage:  python src/appendix_b.py      (about 2 min)"""
 import json
 import warnings

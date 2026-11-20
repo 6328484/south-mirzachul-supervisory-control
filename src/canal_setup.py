@@ -2,8 +2,8 @@
 Calibrated canal and delivery ratios of the offtake groups
 ==========================================================
 make_canal   — builds the Saint-Venant model of the canal and calibrates the gate openings to the
-               passport depths at Qmax (Sect. IV-A).
-reach_shares — delivery ratios of the nine offtake groups (Sect. IV-B): the offtakes of reaches 2..9
+               passport depths at Qmax (Hydrodynamic Model).
+reach_shares — delivery ratios of the nine offtake groups (Delivery Indicators and Operating Limits): the offtakes of reaches 2..9
                and the outflow through the tail structure.
 """
 import numpy as np
