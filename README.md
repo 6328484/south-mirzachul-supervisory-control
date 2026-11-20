@@ -4,6 +4,8 @@
 
 Archived on Zenodo: https://doi.org/10.5281/zenodo.23494009 (all versions; v1.0.0: https://doi.org/10.5281/zenodo.23494010).
 
+Supplemental Materials of the article (Sections S1–S6, Tables S1–S6, Figs. S1–S4): https://doi.org/10.5281/zenodo.24395198 (also in `supplemental/`).
+
 Code, input data, trained controllers and simulation results for the article
 
 > Abdujabborov Z.A., Seytov A.J., Choriyorov N.Q., Seytimbetov D.M., Abdumannopova M.J., Esonturdiyev M.N. **Neural supervisory gate control for sharing a supply shortage in a large irrigation main canal.** Manuscript submitted to the *Journal of Water Resources Planning and Management* (ASCE).
