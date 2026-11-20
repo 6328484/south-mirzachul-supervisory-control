@@ -59,6 +59,7 @@ results/
   timeseries_extra.npz         time series of the staged-rule and effort runs
   indicators.json              Molden-Gates indicators of the runs in timeseries.npz
   robustness_noise_faults.json noise and fault tests
+supplemental/                  JWRPM_Supplemental_Materials.pdf: Sections S1–S6, Tables S1–S6 and Figs. S1–S4 of the article
 figures/                       Figs. 2–5 and S1–S4 (.png, 300 dpi; .pdf; file names keep the numbering of an earlier draft, see below)
 run_all.sh                     the complete pipeline in order
 ```
