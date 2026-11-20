@@ -14,7 +14,7 @@ abstract: >-
   roughness uncertainty, measurement noise and equipment faults. The repository
   contains everything needed to rebuild Tables I–VI, Table B.1 (Supplementary Material) and Figs. 2–9 of the article.
   Code: MIT licence; data, results and figures: CC BY 4.0 (see LICENSE-DATA.md).
-version: "1.1.3"
+version: "1.2.0"
 doi: 10.5281/zenodo.23494009
 license: MIT
 repository-code: "https://github.com/6328484/south-mirzachul-supervisory-control"
@@ -32,10 +32,10 @@ authors:
     given-names: Nurbek Q.
     orcid: "https://orcid.org/0000-0001-7289-0303"
     affiliation: "Research Institute of Irrigation and Water Problems; University of World Economy and Diplomacy, Tashkent, Uzbekistan"
-  - family-names: Haydarova
-    given-names: Roziya D.
-    orcid: "https://orcid.org/0009-0007-8346-858X"
-    affiliation: "Department of Algebra and Geometry, Termez State University, Termez, Uzbekistan"
+  - family-names: Seytimbetov
+    given-names: Dauletyar M.
+    orcid: "https://orcid.org/0009-0007-9064-6129"
+    affiliation: "Department of Digital Technologies, Tashkent Perfect University, Tashkent, Uzbekistan"
   - family-names: Abdumannopova
     given-names: Mamura J.
     orcid: "https://orcid.org/0009-0000-8605-5798"
@@ -79,9 +79,9 @@ preferred-citation:
     - family-names: Choriyorov
       given-names: Nurbek Q.
       orcid: "https://orcid.org/0000-0001-7289-0303"
-    - family-names: Haydarova
-      given-names: Roziya D.
-      orcid: "https://orcid.org/0009-0007-8346-858X"
+    - family-names: Seytimbetov
+      given-names: Dauletyar M.
+      orcid: "https://orcid.org/0009-0007-9064-6129"
     - family-names: Abdumannopova
       given-names: Mamura J.
       orcid: "https://orcid.org/0009-0000-8605-5798"
